@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font: normal 16px sans-serif;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    
+}
+li {
+    float: right;
+}
+nav {
+    list-style: none;
+}
+
+li a {
+    font: normal 14px "Orbitron", sans-serif;
+    text-decoration: none;
+    opacity: 0.85;
+    color: #fff;
+}
+p a {
+    display: block;
+    font: normal 20px "Orbitron", sans-serif;
+    text-decoration: none;
+    opacity: 0.85;
+    color: #fff;
+    padding-bottom: 20px;
+}
+
+.mail{
+    position:relative;
+    text-decoration:none;
+    display:inline-block;
+  }
+.mail:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px #611d4e;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+    transform-origin:100% 50%
+  }
+.mail:hover:after { 
+    transform: scaleX(1);
+    transform-origin:0 50%;
+  }
+
+
+
+
+
+li a:hover {
+    opacity: 1;
+    
+}
+footer {
+    text-align: center;
+    display: block;
+    font: normal 14px "Orbitron", sans-serif;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 80px;
+}
+
+section:not(.jumbo):nth-last-child(even) {
+    background-color: #c94b4b;
+    color: #fff;
+}
+
+.contact ul li a {
+    margin: 15px 15px;   
+}
+
+header {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px 0;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+    color: #fff;
+}
+
+header h2 {
+    font-family: "Quicksand", sans-serif;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav li {
+    margin: 15px 15px;
+}
+
+h3.title {
+    font: bold 28px "Orbitron", sans-serif;
+    margin-bottom: 35px;
+}
+
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.grid h4 {
+    font: bold 14px "Orbitron", sans-serif;
+}
+
+.about .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.about .grid li i {
+    color: #c94b4b;   
+}
+
+.about .grid li h4 {
+    font-size: 30px;
+    margin: 25px 0;
+}
+
+.jumbo {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0;
+    min-height: 100vh;
+    color: #fff;
+    z-index: -1;
+}
+
+.jumbo .backimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+    background: #c94b4b;  
+    background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);
+    background: linear-gradient(to right, #4b134f, #c94b4b);
+    z-index: -1;
+    
+}
+
+.jumbo h1 {
+    font: bold 60px "Orbitron", sans-serif;
+    margin-bottom: 15px;
+}
+
+
+ .jumbo-content {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1s forwards;
+}
+.experience {
+    display: block;
+    width: 100%;
+    height: 100%;
+    flex-direction: column!important;
+}
+.others {
+    float: left;
+    width: 50%;
+    
+}
+.others span {
+    flex-wrap: nowrap!important;
+}
+.js {
+    width: 50%;
+    float: right;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#mail {
+    padding-bottom: 15px;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 50px 20px;
+    }
+
+    header {
+        padding: 20px 50px;
+        flex-direction: column;
+    }
+
+    .jumbo {
+        min-height: 600px;
+    }
+
+    .jumbo h1 {
+        font-size: 48px;
+    }
+
+    
+}
+
+
+@keyframes fadein {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidefade {
+    100% {
+        opacity: 1;
+        margin: 0;
+    }
+}
+
